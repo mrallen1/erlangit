@@ -1,0 +1,25 @@
+* v1
+** get references
+** rev-parse
+** parse tag objects
+** parse author data
+** write commit, tree, tag, blob objects
+** write/update references
+** performance
+   - cache index file information (use an OTP server?) so we don't have to
+     reparse them each time
+
+* v2
+** diff
+** merge-base calculation
+** simple merges
+** read index file (ls-files)
+** write index entries (read-tree)
+** revlist caching
+** incremental log
+
+* v3
+** git/http fetch
+   webmachine/mochiweb HTTP Git server
+** git/http/ssh push
+** git/http serve

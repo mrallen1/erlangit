@@ -1,2 +1,8 @@
-ebin
-*.dump
+*.beam
+.eunit
+deps/*
+*~
+dev/*
+doc/*
+ebin/*
+erl_crash.dump

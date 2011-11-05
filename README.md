@@ -7,7 +7,7 @@ Currently it is capable of reading Git objects out of loose or packfile
 formats and parsing tree and commit objects into more meaningful data
 structures.
 
-It is currently slower than a slow-motion replay of a cold-weather molasses
+It is __currently__ slower than a slow-motion replay of a cold-weather molasses
 drip-race judged by sloths who just took Nyquil. Slowly.
 
 Installation
@@ -29,7 +29,7 @@ Basic API
 
 First you initialize a Git object with the path to a Git repository:
 
-	Git = git:open("test_git")
+	Git = git:open("test/test_git")
 
 You can get the type, size and data for any object in Git with the
 git:object_data call:
