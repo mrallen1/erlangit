@@ -1,7 +1,9 @@
+%% -*- erlang -*-
+
 {application, erlangit,
  [
-  {description, ""},
-  {vsn, "1"},
+  {description, "ErlanGit: an implementation of the Git in Erlang"},
+  {vsn, "0.0.1"},
   {registered, []},
   {applications, [
                   kernel,
