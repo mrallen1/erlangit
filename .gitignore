@@ -6,3 +6,4 @@ dev/*
 doc/*
 ebin/*
 erl_crash.dump
+_build/*

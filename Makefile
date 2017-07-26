@@ -1,31 +1,17 @@
-REBAR = $(shell pwd)/rebar
-
-.PHONY: deps rel stagedevrel
+REBAR = rebar3
 
 ERLC_FLAGS = "+debug_info -W2 -o ebin"
 
-all: deps compile
+all: compile
 
 compile:
 	$(REBAR) compile
 
-deps:
-	$(REBAR) get-deps
-
 clean:
 	$(REBAR) clean
 
-distclean: clean devclean relclean
-	$(REBAR) delete-deps
-
 test:
 	$(REBAR) skip_deps=true eunit
-
-rel: all
-	$(REBAR) generate
-
-relclean:
-	rm -rf rel/riak_git
 
 console:
 	@erl +Bc +K true -smp enable -pa ebin -sname local_console_${.MAKE.PID} -kernel start_boot_server true
